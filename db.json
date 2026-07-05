@@ -1,0 +1,84 @@
+{
+  "settings": {
+    "businessName": "AFC Allagadda",
+    "businessNameTelugu": "AFC ఆళ్లగడ్డ",
+    "tagline": "Crispy Fried Chicken, Sizzling Hot & Fresh — Every Single Time",
+    "description": "Fried chicken takeaway serving Allagadda since day one. Dine-in, drive-through & no-contact delivery.",
+    "phone": "+919133738757",
+    "whatsapp": "+919133738757",
+    "altPhone": "+919948027357",
+    "address": "Near Reliance Mart, Allagadda, Andhra Pradesh 518543",
+    "plusCode": "4GH6+7W Allagadda, Andhra Pradesh",
+    "hours": {
+      "mon": "10:00-22:00", "tue": "10:00-22:00", "wed": "10:00-22:00",
+      "thu": "10:00-22:00", "fri": "10:00-22:00", "sat": "10:00-22:00", "sun": "10:00-22:00"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps?q=Allagadda+Andhra+Pradesh+518543&output=embed",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=AFC+Allagadda",
+    "upiId": "yourupi@bank",
+    "rating": 4.2,
+    "reviewCount": 333,
+    "priceRange": "₹1-200 per person",
+    "services": ["Dine-in", "Drive-through", "No-contact delivery"],
+    "_editNote": "PLACEHOLDER FIELDS TO REPLACE: upiId (your real UPI ID), mapEmbedUrl (use your exact Google Maps share link), hours (confirm per day)."
+  },
+  "products": [
+    {
+      "id": "p1", "name": "Special Fried Chicken Burger", "category": "chicken",
+      "price": 149, "sizes": ["Regular"], "tags": ["bestseller"],
+      "description": "Crispy fried chicken fillet, house sauce, fresh lettuce, toasted bun.",
+      "ingredients": "Chicken, flour coating, lettuce, mayo, bun, spices",
+      "image": "🍔", "available": true
+    },
+    {
+      "id": "p2", "name": "AFC Special Chicken Pizza", "category": "pizza",
+      "price": 189, "sizes": ["Small", "Medium", "Large"], "tags": ["bestseller"],
+      "description": "Loaded chicken pizza with peri peri seasoning and mozzarella.",
+      "ingredients": "Chicken, pizza base, mozzarella, peri peri seasoning, veggies",
+      "image": "🍕", "available": true
+    },
+    {
+      "id": "p3", "name": "Sweet Corn Pizza", "category": "pizza",
+      "price": 159, "sizes": ["Small", "Medium", "Large"], "tags": [],
+      "description": "Classic sweet corn pizza with mozzarella and herbs.",
+      "ingredients": "Sweet corn, pizza base, mozzarella, herbs",
+      "image": "🍕", "available": true
+    },
+    {
+      "id": "p4", "name": "Peri Peri French Fries", "category": "sides",
+      "price": 99, "sizes": ["Regular", "Large"], "tags": ["bestseller"],
+      "description": "Golden fries tossed in tangy peri peri seasoning.",
+      "ingredients": "Potato, peri peri spice mix, oil, salt",
+      "image": "🍟", "available": true
+    },
+    {
+      "id": "p5", "name": "Crispy Corn", "category": "sides",
+      "price": 109, "sizes": ["Regular"], "tags": [],
+      "description": "Crunchy fried corn kernels tossed in spicy masala.",
+      "ingredients": "Sweet corn, cornflour coating, spices",
+      "image": "🌽", "available": true
+    },
+    {
+      "id": "p6", "name": "Chicken Popcorn", "category": "chicken",
+      "price": 139, "sizes": ["Regular", "Large"], "tags": ["bestseller"],
+      "description": "Bite-sized crispy fried chicken poppers, a customer favourite.",
+      "ingredients": "Boneless chicken, seasoned coating, spices",
+      "image": "🍗", "available": true
+    },
+    {
+      "id": "p7", "name": "Red Velvet Brownie", "category": "dessert",
+      "price": 89, "sizes": ["Regular"], "tags": ["new"],
+      "description": "Rich red velvet brownie with a fudgy centre.",
+      "ingredients": "Cocoa, red velvet mix, cream cheese swirl",
+      "image": "🍰", "available": true
+    },
+    {
+      "id": "p8", "name": "Red Velvet Ice Cream Cake", "category": "dessert",
+      "price": 179, "sizes": ["Regular"], "tags": ["new"],
+      "description": "Layered red velvet sponge with vanilla ice cream.",
+      "ingredients": "Red velvet sponge, ice cream, cream frosting",
+      "image": "🎂", "available": true
+    }
+  ],
+  "orders": []
+}

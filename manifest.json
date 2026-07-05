@@ -1,0 +1,14 @@
+{
+  "name": "AFC Allagadda",
+  "short_name": "AFC Allagadda",
+  "description": "Order crispy fried chicken, pizza & desserts from AFC Allagadda",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1B1410",
+  "theme_color": "#E8491D",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

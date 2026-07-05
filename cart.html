@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — AFC Allagadda</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#E8491D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="tag-dot"></span> AFC Allagadda</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="track.html">Track Order</a>
+      <a href="admin.html">Admin</a>
+      <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">🌙</button>
+      <a href="cart.html" class="cart-pill active">🛒 Cart <span class="count" id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h1 style="font-size:clamp(1.8rem,4vw,2.4rem);">Your Cart</h1>
+
+    <div id="cartEmpty" class="empty-state hidden">
+      <div class="big-emoji">🛒</div>
+      <h3>Your cart is empty</h3>
+      <p>Add something crispy from the menu to get started.</p>
+      <a href="menu.html" class="btn btn-primary">Browse Menu</a>
+    </div>
+
+    <div id="cartFull" class="cart-layout">
+      <div id="cartItems"></div>
+
+      <div class="summary-box">
+        <h3 style="font-family:var(--font-body); font-weight:800;">Order Summary</h3>
+        <div class="summary-line"><span>Subtotal</span><span id="subtotalVal">₹0</span></div>
+        <div class="summary-line total"><span>Total</span><span id="totalVal">₹0</span></div>
+
+        <form id="checkoutForm" style="margin-top:20px;">
+          <div class="form-field">
+            <label for="custName">Full name</label>
+            <input id="custName" required placeholder="Your name">
+          </div>
+          <div class="form-field">
+            <label for="custPhone">Phone number</label>
+            <input id="custPhone" required placeholder="10-digit mobile number" pattern="[0-9]{10}">
+          </div>
+          <div class="form-field">
+            <label for="custAddress">Delivery address</label>
+            <textarea id="custAddress" required rows="2" placeholder="House no, street, landmark"></textarea>
+          </div>
+          <div class="form-field">
+            <label for="custNotes">Order notes (optional)</label>
+            <input id="custNotes" placeholder="e.g. less spicy, no onions">
+          </div>
+
+          <label style="display:block; font-size:.85rem; margin-bottom:.5em; color:var(--text-dim);">Payment method</label>
+          <div class="pay-options">
+            <div class="pay-option selected" data-method="COD">💵<br>Cash on Delivery</div>
+            <div class="pay-option" data-method="UPI">📱<br>UPI</div>
+          </div>
+          <input type="hidden" id="paymentMethod" value="COD">
+
+          <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="bottom">© <span id="year"></span> AFC Allagadda.</div></div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

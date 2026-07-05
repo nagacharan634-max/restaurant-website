@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — AFC Allagadda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loginScreen">
+  <div class="login-box">
+    <h2 style="font-size:1.6rem;">Admin Login</h2>
+    <p style="font-size:.85rem;">Default password is <code>afc2026</code> — change it via the ADMIN_PASSWORD environment variable on your backend server.</p>
+    <div class="form-field">
+      <label for="pwInput">Password</label>
+      <input type="password" id="pwInput" placeholder="••••••••">
+    </div>
+    <button id="loginBtn" class="btn btn-primary btn-block">Log In</button>
+    <p id="loginError" style="color:var(--velvet); font-size:.85rem; margin-top:10px;"></p>
+  </div>
+</div>
+
+<div id="dashboard" class="admin-shell hidden">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="brand" style="font-size:1.2rem;"><span class="tag-dot"></span> AFC Admin</a>
+    <button class="tab-link active" data-tab="orders">📦 Orders</button>
+    <button class="tab-link" data-tab="products">🍗 Products</button>
+    <button class="tab-link" data-tab="analytics">📊 Analytics</button>
+    <button class="tab-link" data-tab="settings">⚙️ Settings</button>
+    <button id="logoutBtn" style="margin-top:20px; color:var(--chili);">↩ Log Out</button>
+  </aside>
+
+  <main class="admin-main">
+    <!-- ORDERS -->
+    <section id="tab-orders">
+      <div class="section-head"><h2>Orders</h2><button id="exportBtn" class="btn btn-outline btn-sm">⬇ Export CSV</button></div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Placed</th></tr></thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="tab-products" class="hidden">
+      <div class="section-head">
+        <h2>Products</h2>
+        <button id="newProductBtn" class="btn btn-primary btn-sm">+ Add Product</button>
+      </div>
+      <div id="productForm" class="summary-box hidden" style="position:static; margin-bottom:20px;">
+        <h3 style="font-family:var(--font-body);">Product Details</h3>
+        <input type="hidden" id="pId">
+        <div class="form-field"><label>Name</label><input id="pName"></div>
+        <div class="form-field"><label>Category</label>
+          <select id="pCategory"><option value="chicken">Chicken</option><option value="pizza">Pizza</option><option value="sides">Sides</option><option value="dessert">Dessert</option></select>
+        </div>
+        <div class="form-field"><label>Price (₹)</label><input id="pPrice" type="number"></div>
+        <div class="form-field"><label>Sizes (comma separated)</label><input id="pSizes" placeholder="Regular, Large"></div>
+        <div class="form-field"><label>Description</label><textarea id="pDesc" rows="2"></textarea></div>
+        <div class="form-field"><label>Ingredients</label><input id="pIngredients"></div>
+        <div class="form-field"><label>Emoji / image placeholder</label><input id="pImage" placeholder="🍗"></div>
+        <div class="form-field">
+          <label>Tags</label>
+          <label style="display:inline-flex; align-items:center; gap:6px; font-size:.85rem; margin-right:14px;"><input type="checkbox" id="pBestseller" style="width:auto;"> Best Seller</label>
+          <label style="display:inline-flex; align-items:center; gap:6px; font-size:.85rem;"><input type="checkbox" id="pNew" style="width:auto;"> New Arrival</label>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button id="saveProductBtn" class="btn btn-primary">Save</button>
+          <button id="cancelProductBtn" class="btn btn-outline">Cancel</button>
+        </div>
+      </div>
+      <div class="card-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- ANALYTICS -->
+    <section id="tab-analytics" class="hidden">
+      <div class="section-head"><h2>Sales Analytics</h2></div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="num" id="statSales">₹0</div><div class="label">Total Sales</div></div>
+        <div class="stat-card"><div class="num" id="statOrders">0</div><div class="label">Total Orders</div></div>
+        <div class="stat-card"><div class="num" id="statAvg">₹0</div><div class="label">Avg. Order Value</div></div>
+      </div>
+      <h3 style="font-family:var(--font-body);">Top Selling Items</h3>
+      <div id="bestSellerList"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="tab-settings" class="hidden">
+      <div class="section-head"><h2>Business Settings</h2></div>
+      <div class="summary-box" style="position:static; max-width:520px;">
+        <div class="form-field"><label>Business Name</label><input id="sName"></div>
+        <div class="form-field"><label>Tagline</label><input id="sTagline"></div>
+        <div class="form-field"><label>Phone</label><input id="sPhone"></div>
+        <div class="form-field"><label>WhatsApp Number</label><input id="sWhatsapp"></div>
+        <div class="form-field"><label>Address</label><textarea id="sAddress" rows="2"></textarea></div>
+        <div class="form-field"><label>UPI ID</label><input id="sUpi"></div>
+        <button id="saveSettingsBtn" class="btn btn-primary">Save Settings</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

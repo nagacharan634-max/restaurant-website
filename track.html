@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Your Order — AFC Allagadda</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#E8491D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="tag-dot"></span> AFC Allagadda</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="track.html" class="active">Track Order</a>
+      <a href="admin.html">Admin</a>
+      <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">🌙</button>
+      <a href="cart.html" class="cart-pill">🛒 Cart <span class="count" id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap" style="max-width:640px;">
+    <span class="eyebrow">Order Status</span>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.4rem);">Track Your Order</h1>
+
+    <div class="form-field">
+      <label for="orderIdInput">Order ID</label>
+      <input id="orderIdInput" placeholder="e.g. AFC-M8X2K3">
+    </div>
+    <button id="trackBtn" class="btn btn-primary">Track Order</button>
+
+    <div id="upiBanner" class="hidden" style="margin-top:20px; background:var(--bg-panel); border:1px solid var(--border); border-radius:12px; padding:18px;">
+      <p style="margin-bottom:.6em;"><b>Complete your UPI payment</b> to confirm this order faster.</p>
+      <a id="upiPayBtn" href="#" class="btn btn-gold btn-block">📱 Pay via UPI App</a>
+    </div>
+
+    <div id="orderResult" style="margin-top:28px;"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="bottom">© <span id="year"></span> AFC Allagadda.</div></div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/track.js"></script>
+</body>
+</html>

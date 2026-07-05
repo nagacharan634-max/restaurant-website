@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFC Allagadda — Crispy Fried Chicken, Pizza &amp; Desserts</title>
+<meta name="description" content="AFC Allagadda: crispy fried chicken, pizza, sides and desserts. Dine-in, drive-through, no-contact delivery in Allagadda, Andhra Pradesh.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#E8491D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="tag-dot"></span> AFC Allagadda</a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="track.html">Track Order</a>
+      <a href="admin.html">Admin</a>
+      <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">🌙</button>
+      <a href="cart.html" class="cart-pill">🛒 Cart <span class="count" id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="ticket">
+      <div>
+        <span class="ticket-token">ORDER No. 001 · TAKEAWAY</span>
+        <h1>Fried Chicken, <span class="accent">Fresh Off</span> the Fryer</h1>
+        <p class="telugu">AFC ఆళ్లగడ్డ</p>
+        <p class="tagline" id="tagline">Crispy fried chicken, sizzling hot & fresh — every single time.</p>
+        <div class="cta-row">
+          <a href="tel:+919133738757" class="btn btn-primary" id="callBtn">📞 Call Now</a>
+          <a href="#" class="btn btn-whatsapp" id="whatsappBtn">💬 WhatsApp</a>
+          <a href="menu.html" class="btn btn-gold">🍗 Order Now</a>
+        </div>
+        <div class="meta-row">
+          <span class="rating-badge">⭐ <strong id="ratingVal">4.2</strong> (<span id="reviewCount">333</span> reviews)</span>
+          <span id="openStatus" class="rating-badge">Open</span>
+          <span>₹1–200 per person</span>
+        </div>
+      </div>
+      <div class="hero-photo" aria-hidden="true">🍗</div>
+    </div>
+  </div>
+</section>
+
+<div class="info-strip">
+  <div class="wrap">
+    <div class="info-item">
+      📍 <span><b>Location</b><span id="addressText">Near Reliance Mart, Allagadda, Andhra Pradesh 518543</span></span>
+    </div>
+    <div class="info-item">
+      🕒 <span><b>Hours today</b><span id="hoursText">10:00 AM – 10:00 PM</span></span>
+    </div>
+    <div class="info-item">
+      🚗 <span><b>Services</b><span>Dine-in · Drive-through · No-contact delivery</span></span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Crowd Favourites</span>
+        <h2>Best Sellers</h2>
+      </div>
+      <a href="menu.html" class="btn btn-outline btn-sm">See full menu →</a>
+    </div>
+    <div class="card-grid" id="bestSellerGrid">
+      <p>Loading menu…</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-panel); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">333 Reviews · 4.2★</span>
+        <h2>What Allagadda is Saying</h2>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Food taste is good quality good Chicken popcorn most tried, nice."</p>
+        <div class="who">— Google review</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Just loved the place, must try red velvet brownie with ice cream."</p>
+        <div class="who">— Google review</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Nice food options — pizzas, burgers and ice creams are also available."</p>
+        <div class="who">— Google review</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Food taste was great. Ambience was good. Overall nice experience."</p>
+        <div class="who">— prudhvi raj, Local Guide</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Find Us</span>
+        <h2>Visit the Counter</h2>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=AFC+Allagadda" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open in Google Maps →</a>
+    </div>
+    <div style="border-radius:14px; overflow:hidden; border:1px solid var(--border); aspect-ratio:16/7;">
+      <iframe id="mapEmbed" src="https://www.google.com/maps?q=Allagadda+Andhra+Pradesh+518543&output=embed"
+        width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="AFC Allagadda location"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-panel); border-top:1px solid var(--border);">
+  <div class="wrap" style="max-width:800px;">
+    <span class="eyebrow">Good to Know</span>
+    <h2 style="margin-bottom:.6em;">Frequently Asked Questions</h2>
+
+    <details class="faq-item" open>
+      <summary>Do I need an account to order?</summary>
+      <p>No — you can browse the menu, add items to your cart and place an order without signing up. Creating an account is optional and lets you track past orders and save favourites.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What payment methods do you accept?</summary>
+      <p>Cash on Delivery and UPI are both supported at checkout. Card and net banking support is coming soon.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I track my order?</summary>
+      <p>Yes. After placing an order you'll get an order ID — enter it on the <a href="track.html">Track Order</a> page any time to see its live status.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What's your return/refund policy?</summary>
+      <p>Food quality issues are taken seriously — contact us on WhatsApp or call within 30 minutes of delivery with your order ID and we'll make it right with a replacement or refund.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do you offer drive-through or dine-in?</summary>
+      <p>Both are available at the Allagadda counter, along with no-contact delivery for online orders.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>AFC Allagadda</h4>
+        <p style="font-size:.85rem;">Fried chicken takeaway near Reliance Mart, Allagadda, Andhra Pradesh 518543.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="track.html">Track Order</a>
+        <a href="admin.html">Admin Login</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+919133738757">📞 +91 91337 38757</a>
+        <a href="#" id="footerWhatsapp">💬 WhatsApp Us</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=AFC+Allagadda" target="_blank" rel="noopener">📍 Get Directions</a>
+      </div>
+    </div>
+    <div class="bottom">© <span id="year"></span> AFC Allagadda. Built with care for a hometown favourite.</div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
